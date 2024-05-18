@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00000000;
+    color: white;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .logo {
+    font-size: 24px;
+    line-height: 80%;
+}
+
+header .logo .logo-foot {
+    font-size: 25px;
+}
+
+header nav {
+    position: relative;
+}
+
+header nav .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header nav .menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 0px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    color: #ccc;
+}
+
+header nav ul .dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for glass panel */
+    top: calc(100% + 5px); /* Adjust the distance from the parent item */
+    left: 0;
+    min-width: 160px;
+    z-index: 1000;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    padding: 10px 0; /* Padding for dropdown content */
+    overflow: hidden;
+}
+
+header nav ul .dropdown-content li {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a border between items with slight transparency */
+}
+
+header nav ul .dropdown-content li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+header nav ul .dropdown-content li a {
+    color: white;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header nav ul .dropdown-content li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover with transparency */
+}
+
+header nav ul .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.showcase {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color) url('https://traversymedia.com/downloads/cover.jpg') no-repeat center center/cover;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.video-container:after {
+    content: '';
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.content {
+    z-index: 0;
+    padding: 20px;
+    text-align: left;
+}
+
+.content h1 {
+    font-weight: 300;
+    font-size: 9vw;
+    margin: 0;
+    
+}
+
+.content .statement h3 {
+    font-size: 2vw;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    border: solid #fff 1px;
+    opacity: 0.7;
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul.showing {
+        display: block;
+    }
+
+    header nav .menu-toggle {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    .content h1 {
+        font-size: 10vw;
+    }
+
+    .content .statement h3 {
+        font-size: 4vw;
+    }
+}
+.statement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+}
