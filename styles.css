@@ -244,3 +244,82 @@ header nav ul .dropdown:hover .dropdown-content {
     align-items: center;
     gap: 10px;
 }
+
+.about {
+    padding: 50px 20px;
+    color: #fff;
+    background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.85) 100%
+    ), 
+      url(
+berkshireimg.jpg) no-repeat center center/cover;
+
+}
+
+.about .about-container {
+    display: flex;
+    margin:  0 px;
+    gap: 50px;
+    align-items: center;
+    margin: 40px;
+}
+
+
+.about h1 {
+    font-size: 12vw;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 5rem;
+    }
+
+    .about p {
+        font-size: 1.2rem;
+    }
+}
+.plaza {
+    width: 30vw;
+    height: 100%;
+    border-radius: 20px;
+}
+.plaza:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+    .about .about-container {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        margin: 0px auto;
+    }
+    .plaza{
+        width: 60vw;
+    }
+    
+}
+.word-border {
+    border: 1px solid #fff;
+    width: 100%;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.companies {
+    color: rgb(215, 215, 215);
+    font-size: 110%;
+}
+.geico {
+    filter:invert(1);
+}
