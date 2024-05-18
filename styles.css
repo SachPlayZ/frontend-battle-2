@@ -668,8 +668,8 @@ header nav ul .dropdown:hover .dropdown-content {
     
   }
   .slide-text h1 {
+
     font-size: 3rem;
-    margin: 0;
     margin-bottom: 4rem;
   }
   .slide-text a {
@@ -696,4 +696,7 @@ header nav ul .dropdown:hover .dropdown-content {
         .slide-text a{
             line-height: 2;
         }
+    }
+    .text-cent {
+       text-align: center;
     }
