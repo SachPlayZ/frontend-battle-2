@@ -7,7 +7,6 @@
 }
 
 body {
-    
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -63,6 +62,11 @@ header nav ul {
     padding: 0;
 }
 
+header nav ul.showing {
+    display: flex;
+    flex-direction: column;
+}
+
 header nav ul li {
     margin-left: 0px;
     position: relative;
@@ -81,25 +85,29 @@ header nav ul li a:hover {
 header nav ul .dropdown-content {
     display: none;
     position: absolute;
-    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-    backdrop-filter: blur(10px); /* Blur effect for glass panel */
-    top: calc(100% + 5px); /* Adjust the distance from the parent item */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    top: calc(100% + 5px);
     left: 0;
     min-width: 160px;
     z-index: 1000;
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-    padding: 10px 0; /* Padding for dropdown content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
     overflow: hidden;
+}
+
+header nav ul .dropdown-content.show {
+    display: block;
 }
 
 header nav ul .dropdown-content li {
     padding: 10px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a border between items with slight transparency */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 header nav ul .dropdown-content li:last-child {
-    border-bottom: none; /* Remove border from the last item */
+    border-bottom: none;
 }
 
 header nav ul .dropdown-content li a {
@@ -109,7 +117,7 @@ header nav ul .dropdown-content li a {
 }
 
 header nav ul .dropdown-content li:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover with transparency */
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 header nav ul .dropdown:hover .dropdown-content {
@@ -168,13 +176,11 @@ header nav ul .dropdown:hover .dropdown-content {
     font-weight: 300;
     font-size: 9vw;
     margin: 0;
-    
 }
 
 .content .statement h3 {
     font-size: 2vw;
 }
-
 
 .btn {
     display: inline-block;
@@ -201,7 +207,7 @@ header nav ul .dropdown:hover .dropdown-content {
     }
 
     header nav ul.showing {
-        display: block;
+        display: flex;
     }
 
     header nav .menu-toggle {
@@ -226,9 +232,10 @@ header nav ul .dropdown:hover .dropdown-content {
         font-size: 4vw;
     }
 }
+
 .statement {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px
+    gap: 10px;
 }
