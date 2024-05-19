@@ -34,3 +34,13 @@ nextButton.addEventListener('click', () => showSlide(currentSlide + 1));
 
 // Auto-play functionality
 setInterval(() => showSlide(currentSlide + 1), 5000); // Change slide every 5 seconds
+
+
+function toggleLetter(letterId) {
+  var letterContent = document.getElementById(letterId);
+  if (letterContent.style.display === "none" || letterContent.style.display === "") {
+      letterContent.style.display = "block";
+  } else {
+      letterContent.style.display = "none";
+  }
+}
